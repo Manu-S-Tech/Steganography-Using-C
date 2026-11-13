@@ -1,0 +1,57 @@
+Name                    : Sriramulu Manoj Sai
+Student ID              : 26012_056
+Batch ID                : 26012B
+Start Date              : 18/09/2026
+End Date                : 28/09/2026
+
+Documentation
+
+Project Title : Image Steganography
+
+Project Description:
+
+This project implements image steganography, a technique used to hide secret information inside an image without noticeably changing its
+appearance.
+
+Purpose:
+
+The main.c file controls the overall execution of the project. It determines whether the user wants to perform encoding or decoding based
+on the command-line arguments.
+
+Working:
+
+1. The program receives command-line arguments through argc and argv.
+2. The check_operation_type() function checks whether the user selected encoding (-e) or decoding (-d).
+3. For encoding, the program validates the required arguments and calls do_encoding().
+4. For decoding, the program validates the required arguments and calls do_decoding().
+5. If an invalid operation is provided, an error message is displayed.
+
+Steganography:
+
+In this project, secret data is hidden inside a BMP image during encoding. The hidden data is later extracted from the encoded image
+during decoding.
+
+The main.c file does not perform the actual LSB steganography operation.It controls the encoding and decoding processes by calling the
+corresponding functions.
+
+Functions Used:
+
+main()                                 : Controls the complete execution of the program.
+
+check_operation_type()                 :Checks whether the user selected encoding or decoding.
+
+read_and_validate_encode_args()        :Validates the arguments required for encoding.
+
+do_encoding()                          :Performs the complete encoding process.
+
+read_and_validate_decode_args()        :Validates the arguments required for decoding.
+
+do_decoding()                          :Performs the complete decoding process.
+
+Command Line Format:
+
+Encoding():
+./a.out -e beautiful.bmp secret.txt 
+
+Decoding():
+./a.out -d stego.bmp 
